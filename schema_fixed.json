@@ -1,0 +1,54 @@
+[
+  {
+    "table_name": "Student",
+    "columns": [
+      {"name": "Sno", "type": "TEXT PRIMARY KEY", "description": "学号"},
+      {"name": "Sname", "type": "TEXT NOT NULL", "description": "姓名"},
+      {"name": "Ssex", "type": "TEXT", "description": "性别"},
+      {"name": "Sage", "type": "INTEGER", "description": "年龄"},
+      {"name": "Sdept", "type": "TEXT", "description": "所在系"},
+      {"name": "Scholarship", "type": "TEXT", "description": "奖学金情况"}
+    ]
+  },
+  {
+    "table_name": "Course",
+    "columns": [
+      {"name": "Cno", "type": "TEXT PRIMARY KEY", "description": "课程号"},
+      {"name": "Cname", "type": "TEXT NOT NULL", "description": "课程名"},
+      {"name": "Cpno", "type": "TEXT", "description": "先修课程号"},
+      {"name": "Ccredit", "type": "INTEGER", "description": "学分"}
+    ]
+  },
+  {
+    "table_name": "SC",
+    "columns": [
+      {"name": "Sno", "type": "TEXT", "description": "学号"},
+      {"name": "Cno", "type": "TEXT", "description": "课程号"},
+      {"name": "Grade", "type": "INTEGER", "description": "成绩"},
+      {"name": "PRIMARY KEY", "type": "(Sno, Cno)", "description": "主键"},
+      {"name": "FOREIGN KEY", "type": "(Sno) REFERENCES Student(Sno)", "description": "外键"},
+      {"name": "FOREIGN KEY", "type": "(Cno) REFERENCES Course(Cno)", "description": "外键"}
+    ]
+  },
+  {
+    "table_name": "Teacher",
+    "columns": [
+      {"name": "Tno", "type": "TEXT PRIMARY KEY", "description": "教师编号"},
+      {"name": "Tname", "type": "TEXT NOT NULL", "description": "教师姓名"},
+      {"name": "Tsex", "type": "TEXT", "description": "性别"},
+      {"name": "Tage", "type": "INTEGER", "description": "年龄"},
+      {"name": "Tdept", "type": "TEXT", "description": "所在系"},
+      {"name": "Trank", "type": "TEXT", "description": "职称"}
+    ]
+  },
+  {
+    "table_name": "TC",
+    "columns": [
+      {"name": "Tno", "type": "TEXT", "description": "教师编号"},
+      {"name": "Cno", "type": "TEXT", "description": "课程号"},
+      {"name": "PRIMARY KEY", "type": "(Tno, Cno)", "description": "主键"},
+      {"name": "FOREIGN KEY", "type": "(Tno) REFERENCES Teacher(Tno)", "description": "外键"},
+      {"name": "FOREIGN KEY", "type": "(Cno) REFERENCES Course(Cno)", "description": "外键"}
+    ]
+  }
+]

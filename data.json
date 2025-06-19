@@ -1,0 +1,38 @@
+{
+  "Student": [
+    {"Sno": "001", "Sname": "张三", "Ssex": "男", "Sage": 20, "Sdept": "计算机系", "Scholarship": "是"},
+    {"Sno": "002", "Sname": "李四", "Ssex": "女", "Sage": 19, "Sdept": "数学系", "Scholarship": "否"},
+    {"Sno": "003", "Sname": "王五", "Ssex": "男", "Sage": 21, "Sdept": "计算机系", "Scholarship": "是"},
+    {"Sno": "004", "Sname": "赵六", "Ssex": "女", "Sage": 20, "Sdept": "物理系", "Scholarship": "否"},
+    {"Sno": "005", "Sname": "孙七", "Ssex": "男", "Sage": 22, "Sdept": "计算机系", "Scholarship": "是"}
+  ],
+  "Course": [
+    {"Cno": "C001", "Cname": "数据库", "Cpno": null, "Ccredit": 4},
+    {"Cno": "C002", "Cname": "数学", "Cpno": null, "Ccredit": 3},
+    {"Cno": "C003", "Cname": "信息系统", "Cpno": "C001", "Ccredit": 4},
+    {"Cno": "C004", "Cname": "操作系统", "Cpno": null, "Ccredit": 4},
+    {"Cno": "C005", "Cname": "数据结构", "Cpno": null, "Ccredit": 4}
+  ],
+  "Teacher": [
+    {"Tno": "T001", "Tname": "王老师", "Tsex": "女", "Tage": 45, "Tdept": "计算机系", "Trank": "教授"},
+    {"Tno": "T002", "Tname": "李老师", "Tsex": "男", "Tage": 50, "Tdept": "数学系", "Trank": "教授"},
+    {"Tno": "T003", "Tname": "张老师", "Tsex": "男", "Tage": 40, "Tdept": "计算机系", "Trank": "副教授"},
+    {"Tno": "T004", "Tname": "刘老师", "Tsex": "女", "Tage": 35, "Tdept": "物理系", "Trank": "讲师"}
+  ],
+  "SC": [
+    {"Sno": "001", "Cno": "C001", "Grade": 95},
+    {"Sno": "001", "Cno": "C002", "Grade": 85},
+    {"Sno": "001", "Cno": "C003", "Grade": 88},
+    {"Sno": "002", "Cno": "C001", "Grade": 92},
+    {"Sno": "002", "Cno": "C002", "Grade": 90},
+    {"Sno": "003", "Cno": "C001", "Grade": 89},
+    {"Sno": "003", "Cno": "C003", "Grade": 94}
+  ],
+  "TC": [
+    {"Tno": "T001", "Cno": "C001"},
+    {"Tno": "T002", "Cno": "C002"},
+    {"Tno": "T003", "Cno": "C003"},
+    {"Tno": "T001", "Cno": "C004"},
+    {"Tno": "T003", "Cno": "C005"}
+  ]
+} 
