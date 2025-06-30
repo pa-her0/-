@@ -29,7 +29,6 @@ class SchemaManager:
         self.db_file = f"{db_name}.db"
         self.console = Console(force_terminal=True) # 保持强制颜色输出
 
-    # ... 其他方法（create_table, import_schema_from_json 等）保持不变 ...
     def create_table(self, table_name, columns):
         if not is_valid_identifier(table_name):
             self.console.print(Panel(f"创建表失败: 无效的表名 '{table_name}'", title="[bold red]错误[/bold red]", border_style="red"))
@@ -213,7 +212,6 @@ class SchemaManager:
                 conn.close()
 
     def import_data_from_json(self, json_file):
-        # ... (此方法保持不变) ...
         try:
             if not os.path.exists(json_file):
                 self.console.print(Panel(f"文件 {json_file} 不存在", title="[bold red]错误[/bold red]", border_style="red"))
