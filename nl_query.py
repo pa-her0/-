@@ -13,7 +13,7 @@ from typing import Dict, List, Optional
 # 配置日志
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-# 下载 NLTK 数据 (不变)
+# 下载 NLTK 数据
 try:
     nltk.data.find('tokenizers/punkt')
 except LookupError:
@@ -148,7 +148,7 @@ class NLQueryProcessor:
             return "-- AI响应无效"
 
     def _validate_sql(self, sql_query: str) -> str:
-        """【修正点】使用 sqlparse 更智能地验证SQL"""
+        """使用 sqlparse 更智能地验证SQL"""
         if sql_query.strip().startswith("--"): return sql_query
         if not self._connect_db(): return "-- 数据库连接失败"
         
