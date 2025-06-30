@@ -1,19 +1,18 @@
 import matplotlib
 import matplotlib.pyplot as plt
-import networkx as nx #
+import networkx as nx 
 import sqlite3
-import sqlparse #
-# import re # Not directly used in the provided query_visualizer.py
-# import json # Not directly used in the provided query_visualizer.py
-import time #
-from rich.console import Console #
-from rich.table import Table #
-from rich.panel import Panel #
-from rich.syntax import Syntax #
-from rich.progress import Progress, SpinnerColumn, TextColumn, BarColumn, TimeElapsedColumn #
-from rich.tree import Tree #
-# from rich.text import Text # Not directly used in the provided query_visualizer.py
-from rich import box #
+import sqlparse 
+# import re 
+# import json
+import time 
+from rich.console import Console 
+from rich.table import Table 
+from rich.panel import Panel 
+from rich.syntax import Syntax 
+from rich.progress import Progress, SpinnerColumn, TextColumn, BarColumn, TimeElapsedColumn 
+from rich.tree import Tree 
+from rich import box 
 
 # --- BEGIN Font Configuration for Matplotlib ---
 try:
@@ -128,7 +127,6 @@ class QueryVisualizer:
     
     def _parse_sql_manually(self, sql_query): #
         """手动解析SQL查询以生成简化的查询计划"""
-        # (代码与原来一致) ...
         parsed = sqlparse.parse(sql_query)[0] #
         plan = [] #
         select_seen = False #
