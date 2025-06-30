@@ -214,7 +214,6 @@ def interactive_mode():
                 sql_query = command[4:].strip() if cmd_lower.startswith("sql ") else command
                 execute_sql_statements(sql_query, validator, visualizer)
             
-            # 【修正点】将自然语言处理的完整逻辑恢复到这里
             elif cmd_lower.startswith("nl "):
                 nl_query = command[3:].strip()
                 if not nl_query:
